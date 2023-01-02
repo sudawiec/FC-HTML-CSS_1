@@ -15,19 +15,36 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    /* colors */
+    --bg-color: hsl(0, 0%, 90%);
+    --black: hsl(0, 0%, 0%);
+    --clay: hsl(11, 67%, 64%);
+    --dark-blue: hsl(207, 51%, 17%);
+    --light-blue: hsl(209, 30%, 36%);
+    --dark-grey: hsl(0, 0%, 31%);
+    --light-grey: hsl(0, 0%, 77%);
+    --hurricane-red: hsl(0, 8%, 53%);
+    --seashell-white: hsl(0, 0%, 95%);
+    --white: hsl(0, 0%, 100%);
+    /* fonts */
+    --ff-regular: 'Roboto', sans-serif;
+    --primary-font: 700 1.125rem/1.17 var(--ff-regular);
+}
+
 /* ||GENERALS */
 
 body {
-    background-color: #e5e5e5;
-    color: #ffffff;
-    font: 700 1.125rem/1.17 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--white);
+    font: var(--primary-font);
     padding: 1em;
     text-align: center;
 }
 
 a {
     text-decoration: none;
-    color: #ffffff;
+    color: var(--white);
 }
 
 img {
@@ -49,7 +66,7 @@ h1 {
 
 h2 {
     margin-bottom: 1.75em;
-    color: #152D41;
+    color: var(--dark-blue);
 }
 
 h3 {
@@ -62,8 +79,8 @@ span {
 }
 
 .nav__item a {
-    font: 400 1.125rem/1.17 'Roboto', sans-serif;
-    color: #f1f1f1;
+    font-weight: 400;
+    color: var(--seashell-white);
 }
 
 .text-block__subtitle {
@@ -83,7 +100,7 @@ span {
 .person__text,
 .box__text {
     font-weight: 400;
-    color: #000000;
+    color: var(--black);
 }
 
 .box__text {
@@ -102,11 +119,11 @@ span {
 
 .text-block__btn {
     background-color: transparent;
-    border: 3px solid #ffffff;
+    border: 3px solid var(--white);
     box-shadow: 2px 2px 2px 1px rgba(196, 196, 196, 0.1);
-    color: #ffffff;
+    color: var(--white);
     cursor: pointer;
-    font: 700 1.125rem/1.17 'Roboto', sans-serif;
+    font: var(--primary-font);
     padding: 0.78em 3.22em;
     transition: all 1s ease;
 }
@@ -116,7 +133,7 @@ span {
 /* header */
 .header {
     height: 50px;
-    background-color: #4e4e4e;
+    background-color: var(--dark-grey);
     display: flex;
     align-items: center;
     padding: 0 0.78em;
@@ -158,14 +175,13 @@ span {
 
 /* about-us */
 .about-us {
-    background-color: #f1f1f1;
+    background-color: var(--seashell-white);
     padding: 1.89em 0.78em;
 }
 
 .person__img {
     width: 45%;
     aspect-ratio: 1 / 1;
-    /* background-color: #c4c4c4; */
     background-size: cover;
     border-radius: 50%;
     display: block;
@@ -173,18 +189,18 @@ span {
 }
 
 .person:nth-of-type(odd) .person__img {
-    background-color: #c4c4c4;
+    background-color: var(--light-grey);
     background-image: url(./imgs/ellipse1.jpg)
 }
 
 .person:nth-of-type(even) .person__img {
-    background-color: #907d7d;
+    background-color: var(--hurricane-red);
     background-image: url(./imgs/ellipse2.jpg);
 }
 
 /* offer */
 .offer {
-    background-color: #405d78;
+    background-color: var(--light-blue);
     padding: 4.22em 0 2.5em;
 }
 
@@ -198,7 +214,7 @@ span {
 .box {
     width: 76.5%;
     aspect-ratio: 1 / 1;
-    background-color: #c1c1c1;
+    background-color: var(--seashell-white);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -209,7 +225,7 @@ span {
 .box__circle {
     width: 2.09em;
     aspect-ratio: 1 / 1;
-    background-color: #e07a64;
+    background-color: var(--clay);
     border-radius: 50%;
     top: -1.05em;
     left: -1.05em;
@@ -218,7 +234,7 @@ span {
 
 /* footer */
 .footer {
-    background-color: #4e4e4e;
+    background-color: var(--dark-grey);
     padding: 2.11em 0.78em 2.33em;
 }
 
@@ -258,8 +274,8 @@ i {
         padding: 0 5em 0 5.22em;
     }
     .text-block__btn:hover {
-        background-color: #ffffff;
-        color: #000000;
+        background-color: var(--white);
+        color: var(--black);
     }
     /* about-us */
     .about-us {
