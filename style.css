@@ -53,6 +53,11 @@ img {
     object-fit: cover;
 }
 
+:focus {
+    outline: 3px solid var(--light-grey);
+    outline-offset: 3px;
+}
+
 /* ||TYPOGRAPHY */
 
 h1,

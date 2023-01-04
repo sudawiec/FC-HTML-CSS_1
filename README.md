@@ -26,6 +26,7 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover and focus states for interactive elements
 - See smooth scroll animation after clicking the links
+- Click a hamburger button on the small screen's sizes and see the vertical menu 
 
 ### Screenshot
 
@@ -74,12 +75,47 @@ Users should be able to:
 }
 ```
 
+- Creating some elements using ::after and ::befor pseudo-elements and theirs positioning
+
+```css
+.nav-toggle__hamburger {
+  position: relative;
+}
+.nav-toggle__hamburger,
+.nav-toggle__hamburger::after,
+.nav-toggle__hamburger::before {
+  width: 35px;
+  height: 3px;
+  background-color: var(--white);
+}
+.nav-toggle__hamburger::after,
+.nav-toggle__hamburger::before {
+  content: '';
+  position: absolute;
+  inset: auto 0 auto 0;
+}
+.nav-toggle__hamburger::after {
+  bottom: 10px;
+}
+.nav-toggle__hamburger::before {
+  top: 10px;
+}
+```
+
+- Usage of [cubic-bezier()](https://css-tricks.com/advanced-css-animation-using-cubic-bezier/) function
+
+```css
+.vertical-nav {
+  transform: transition 250ms cubic-bezier(0.5, 0, 0.5, 1);
+}
+```
+
 ### Continued development
 
 The next step I'm going to focus on:
 
-- Creating a hamburger menu button
-- Learning more about cubic-bezier() function
+- Resolve some bug issues with a hamburger navigation
+- Making boxes clickable and redirectable
 
 ### Useful resources
 
@@ -89,4 +125,4 @@ The next step I'm going to focus on:
 
 ## Author
 
-- Radosław Warakomski - [sudawiec](https://github.com/sudawiec)
+- Radek Warakomski - [sudawiec](https://github.com/sudawiec)
