@@ -78,9 +78,13 @@ span {
     display: block;
 }
 
-.nav__item a {
+.horizontal-nav__item a {
     font-weight: 400;
     color: var(--seashell-white);
+}
+
+.vertical-nav__item a {
+    font-size: 2.25rem;
 }
 
 .text-block__subtitle {
@@ -128,6 +132,68 @@ span {
     transition: all 1s ease;
 }
 
+/* ||HAMBURGER */
+
+.nav-toggle {
+    background-color: transparent;
+    border: 0;
+    padding: 0.83em 0;
+    position: absolute;
+    inset: auto 0.78em auto auto;
+    z-index: 2;
+}
+
+.nav-open .nav-toggle {
+    position: fixed;
+    inset: auto 30px auto auto;
+}
+
+.nav-open .vertical-nav {
+    transform: translateX(0);
+}
+
+.nav-open .nav-toggle__hamburger {
+    transform: rotate(0.625turn);
+}
+
+.nav-open .nav-toggle__hamburger::before {
+    transform: rotate(90deg) translateX(-10px);
+}
+
+.nav-open .nav-toggle__hamburger::after {
+    opacity: 0;
+}
+
+.nav-toggle__hamburger {
+    display: block;
+    position: relative;
+}
+
+.nav-toggle__hamburger,
+.nav-toggle__hamburger::after,
+.nav-toggle__hamburger::before {
+    width: 35px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 20px;
+    transition: transform 250ms ease-in-out;
+}
+
+.nav-toggle__hamburger::after,
+.nav-toggle__hamburger::before {
+    content: '';
+    position: absolute;
+    inset: auto 0 auto 0;
+}
+
+.nav-toggle__hamburger::after {
+    bottom: 10px;
+}
+
+.nav-toggle__hamburger::before {
+    top: 10px;
+}
+
 /* ||LAYOUT */
 
 /* header */
@@ -137,15 +203,34 @@ span {
     display: flex;
     align-items: center;
     padding: 0 0.78em;
+    position: relative;
 }
 
-.nav {
+.horizontal-nav {
     display: none;
 }
 
-.nav__list {
+.horizontal-nav__list {
     display: flex;
     gap: 2.55em;
+}
+
+.vertical-nav {
+    background-color: var(--dark-grey);
+    position: fixed;
+    inset: 0 0 0 0;
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.5, 0, 0.5, 1);
+    z-index: 1;
+}
+
+.vertical-nav__list {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
 }
 
 .disabled {
@@ -265,8 +350,11 @@ i {
         justify-content: space-between;
         padding: 0 5em 0 5.22em;
     }
-    .nav {
+    .horizontal-nav {
         display: block;
+    }
+    .nav-toggle {
+        display: none;
     }
     /* landing-page */
     .text-block {

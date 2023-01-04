@@ -23,12 +23,28 @@
       <!-- HEADER -->
       <header class="header">
         <div class="logo">Nazwa firmy</div>
-        <!-- navigation -->
-        <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#about-us">O nas</a></li>
-            <li class="nav__item"><a href="#offer">Oferta</a></li>
-            <li class="nav__item"><a href="#" class="disabled">Kontakt</a></li>
+        <!-- horizontal navigation -->
+        <nav class="horizontal-nav">
+          <ul class="horizontal-nav__list">
+            <li class="horizontal-nav__item"><a href="#about-us">O nas</a></li>
+            <li class="horizontal-nav__item"><a href="#offer">Oferta</a></li>
+            <li class="horizontal-nav__item">
+              <a href="#" class="disabled">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- hamburger button -->
+        <button class="nav-toggle">
+          <span class="nav-toggle__hamburger"></span>
+        </button>
+        <!-- vertical navigation -->
+        <nav class="vertical-nav">
+          <ul class="vertical-nav__list">
+            <li class="vertical-nav__item"><a href="#about-us">O nas</a></li>
+            <li class="vertical-nav__item"><a href="#offer">Oferta</a></li>
+            <li class="vertical-nav__item">
+              <a href="#" class="disabled">Kontakt</a>
+            </li>
           </ul>
         </nav>
       </header>
@@ -116,5 +132,6 @@
         </div>
       </footer>
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>
