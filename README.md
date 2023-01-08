@@ -114,7 +114,6 @@ Users should be able to:
 
 The next step I'm going to focus on:
 
-- Resolve some bug issues with a hamburger navigation
 - Making boxes clickable and redirectable
 
 ### Useful resources

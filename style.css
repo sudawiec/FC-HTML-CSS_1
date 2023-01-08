@@ -358,7 +358,8 @@ i {
     .horizontal-nav {
         display: block;
     }
-    .nav-toggle {
+    .nav-toggle,
+    .vertical-nav {
         display: none;
     }
     /* landing-page */
